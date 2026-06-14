@@ -805,7 +805,7 @@
     const dados = collectData();
 
     try {
-      const response = await fetch('/webhook', {
+      const response = await fetch('https://briefing-mensal-lika.onrender.com/webhook', {
         method: 'POST',
         body: (() => { const fd = new FormData(); fd.append('dados', JSON.stringify(dados)); return fd; })()
       });

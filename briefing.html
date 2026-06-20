@@ -4,827 +4,830 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lika Santana · Briefing Mensal</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --near-black: #291a15;
-    --dark-wine:  #290000;
-    --off-white:  #f9efe5;
-    --accent:     #ff4433;
-    --muted:      #c4b5a8;
-    --card-bg:    #fff8f2;
-    --border:     #e8ddd5;
-  }
+:root {
+--espresso: #2E2622;
+--copper: #C15910;
+--taupe: #AB957F;
+--blue: #6F7F9D;
+--cream: #F5F0EA;
+--card: #FFFFFF;
+--card-bg: #FCFAF7;
+--border: #E6DBCF;
+--text: #2E2622;
+--muted: #8A7C70;
+}
 
-  html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background: var(--off-white);
-    color: var(--near-black);
-    min-height: 100vh;
-  }
+body {
+font-family: 'Montserrat', sans-serif;
+background: var(--cream);
+color: var(--text);
+min-height: 100vh;
+line-height: 1.65;
+}
 
-  /* HEADER */
-  header {
-    background: var(--near-black);
-    padding: 20px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--off-white);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .logo span {
-    color: var(--accent);
-  }
-  .header-tag {
-    font-size: 11px;
-    font-weight: 300;
-    color: var(--muted);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
+/* HEADER */
+header {
+background: var(--espresso);
+padding: 18px 28px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.logo {
+font-family: 'Fraunces', serif;
+font-size: 19px;
+font-weight: 600;
+color: var(--cream);
+letter-spacing: 0.5px;
+}
+.logo span { color: var(--copper); font-style: italic; }
+.header-tag {
+font-size: 11px;
+font-weight: 500;
+color: var(--taupe);
+letter-spacing: 2px;
+text-transform: uppercase;
+}
 
-  /* HERO */
-  .hero {
-    background: var(--near-black);
-    padding: 48px 24px 56px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--accent);
-  }
-  .hero-eyebrow {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .hero h1 {
-    font-size: clamp(26px, 5vw, 40px);
-    font-weight: 900;
-    color: var(--off-white);
-    line-height: 1.15;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    letter-spacing: -0.5px;
-  }
-  .hero p {
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--muted);
-    max-width: 480px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-  .hero p strong {
-    color: var(--off-white);
-    font-weight: 600;
-  }
+/* HERO */
+.hero {
+background: var(--espresso);
+padding: 56px 28px 60px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.hero::before {
+content: "🐆";
+position: absolute;
+bottom: -28px; right: 24px;
+font-size: 150px;
+opacity: 0.06;
+}
+.hero::after {
+content: '';
+position: absolute;
+bottom: 0; left: 0; right: 0;
+height: 3px;
+background: var(--copper);
+}
+.hero-eyebrow {
+font-size: 11px;
+font-weight: 600;
+color: var(--taupe);
+letter-spacing: 4px;
+text-transform: uppercase;
+margin-bottom: 18px;
+position: relative;
+}
+.hero h1 {
+font-family: 'Fraunces', serif;
+font-size: clamp(30px, 5.5vw, 48px);
+font-weight: 600;
+color: var(--cream);
+line-height: 1.08;
+margin-bottom: 18px;
+position: relative;
+}
+.hero h1 em { font-style: italic; color: var(--copper); }
+.hero p {
+font-size: 14.5px;
+font-weight: 300;
+color: rgba(245,240,234,0.72);
+max-width: 480px;
+margin: 0 auto;
+line-height: 1.7;
+position: relative;
+}
+.hero p strong { color: var(--cream); font-weight: 600; }
 
-  /* PROGRESS */
-  .progress-wrapper {
-    background: var(--near-black);
-    padding: 0 24px 32px;
-  }
-  .progress-steps {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  .step-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    flex: 1;
-    position: relative;
-  }
-  .step-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    width: 100%;
-    height: 2px;
-    background: #3a2820;
-    z-index: 0;
-  }
-  .step-item.active:not(:last-child)::after,
-  .step-item.done:not(:last-child)::after {
-    background: var(--accent);
-  }
-  .step-circle {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid #3a2820;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 700;
-    color: #3a2820;
-    background: var(--near-black);
-    position: relative;
-    z-index: 1;
-    transition: all .3s;
-  }
-  .step-item.active .step-circle {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--near-black);
-  }
-  .step-item.done .step-circle {
-    border-color: var(--accent);
-    background: var(--accent);
-    color: var(--off-white);
-  }
-  .step-label {
-    font-size: 10px;
-    font-weight: 600;
-    color: #3a2820;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  .step-item.active .step-label,
-  .step-item.done .step-label {
-    color: var(--muted);
-  }
+/* PROGRESS */
+.progress-wrapper {
+background: var(--espresso);
+padding: 0 28px 36px;
+}
+.progress-steps {
+display: flex;
+justify-content: center;
+gap: 0;
+max-width: 400px;
+margin: 0 auto;
+}
+.step-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+flex: 1;
+position: relative;
+}
+.step-item:not(:last-child)::after {
+content: '';
+position: absolute;
+top: 16px;
+left: 50%;
+width: 100%;
+height: 2px;
+background: #463a33;
+z-index: 0;
+}
+.step-item.active:not(:last-child)::after,
+.step-item.done:not(:last-child)::after {
+background: var(--copper);
+}
+.step-circle {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+border: 2px solid #463a33;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Fraunces', serif;
+font-size: 13px;
+font-weight: 600;
+color: #6a5a50;
+background: var(--espresso);
+position: relative;
+z-index: 1;
+transition: all .3s;
+}
+.step-item.active .step-circle {
+border-color: var(--copper);
+color: var(--copper);
+}
+.step-item.done .step-circle {
+border-color: var(--copper);
+background: var(--copper);
+color: var(--cream);
+}
+.step-label {
+font-size: 10px;
+font-weight: 600;
+color: #6a5a50;
+text-transform: uppercase;
+letter-spacing: 1px;
+text-align: center;
+}
+.step-item.active .step-label,
+.step-item.done .step-label {
+color: var(--taupe);
+}
 
-  /* MAIN */
-  main {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
-  }
+/* MAIN */
+main {
+max-width: 640px;
+margin: 0 auto;
+padding: 44px 20px 80px;
+}
 
-  /* SECTION */
-  .form-section { display: none; }
-  .form-section.active { display: block; }
+/* SECTION */
+.form-section { display: none; }
+.form-section.active { display: block; }
 
-  .section-header {
-    margin-bottom: 32px;
-  }
-  .section-number {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-  .section-header h2 {
-    font-size: clamp(22px, 4vw, 30px);
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1.1;
-    letter-spacing: -0.5px;
-  }
-  .section-header p {
-    font-size: 13px;
-    font-weight: 300;
-    color: #6b5a52;
-    margin-top: 10px;
-    line-height: 1.6;
-  }
+.section-header { margin-bottom: 32px; }
+.section-number {
+font-size: 11px;
+font-weight: 600;
+color: var(--copper);
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+.section-header h2 {
+font-family: 'Fraunces', serif;
+font-size: clamp(24px, 4.5vw, 32px);
+font-weight: 600;
+color: var(--espresso);
+line-height: 1.12;
+}
+.section-header p {
+font-size: 13.5px;
+font-weight: 300;
+color: var(--muted);
+margin-top: 12px;
+line-height: 1.6;
+}
 
-  /* FIELD */
-  .field {
-    margin-bottom: 24px;
-  }
-  label {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--near-black);
-    margin-bottom: 8px;
-  }
-  label .required {
-    color: var(--accent);
-    margin-left: 2px;
-  }
-  label .optional {
-    font-weight: 300;
-    color: var(--muted);
-    font-size: 11px;
-    text-transform: none;
-    letter-spacing: 0;
-    margin-left: 6px;
-  }
+/* FIELD */
+.field { margin-bottom: 24px; }
+label {
+display: block;
+font-size: 12px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+color: var(--espresso);
+margin-bottom: 8px;
+}
+label .required { color: var(--copper); margin-left: 2px; }
+label .optional {
+font-weight: 400;
+color: var(--muted);
+font-size: 11px;
+text-transform: none;
+letter-spacing: 0;
+margin-left: 6px;
+}
 
-  input[type="text"],
-  input[type="number"],
-  select,
-  textarea {
-    width: 100%;
-    background: var(--card-bg);
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    padding: 13px 16px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--near-black);
-    outline: none;
-    transition: border-color .2s;
-    -webkit-appearance: none;
-  }
-  input:focus, select:focus, textarea:focus {
-    border-color: var(--accent);
-  }
-  textarea { resize: vertical; min-height: 100px; }
-  select { cursor: pointer; }
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+width: 100%;
+background: var(--card-bg);
+border: 1.5px solid var(--border);
+border-radius: 8px;
+padding: 13px 16px;
+font-family: 'Montserrat', sans-serif;
+font-size: 14px;
+font-weight: 400;
+color: var(--text);
+outline: none;
+transition: border-color .2s, background .2s;
+-webkit-appearance: none;
+}
+input:focus, select:focus, textarea:focus {
+border-color: var(--taupe);
+background: #fff;
+}
+textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
+select { cursor: pointer; }
 
-  /* RADIO / CHECKBOX */
-  .radio-group, .check-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .radio-option, .check-option {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--card-bg);
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    padding: 13px 16px;
-    cursor: pointer;
-    transition: border-color .2s, background .2s;
-  }
-  .radio-option:has(input:checked),
-  .check-option:has(input:checked) {
-    border-color: var(--accent);
-    background: #fff4f3;
-  }
-  .radio-option input, .check-option input {
-    width: 18px; height: 18px;
-    accent-color: var(--accent);
-    flex-shrink: 0;
-  }
-  .radio-option span, .check-option span {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 1.4;
-  }
+/* RADIO / CHECKBOX */
+.radio-group, .check-group {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.radio-option, .check-option {
+display: flex;
+align-items: center;
+gap: 12px;
+background: var(--card-bg);
+border: 1.5px solid var(--border);
+border-radius: 8px;
+padding: 13px 16px;
+cursor: pointer;
+transition: border-color .2s, background .2s;
+}
+.radio-option:has(input:checked),
+.check-option:has(input:checked) {
+border-color: var(--copper);
+background: #fbf2ea;
+}
+.radio-option input, .check-option input {
+width: 18px; height: 18px;
+accent-color: var(--copper);
+flex-shrink: 0;
+}
+.radio-option span, .check-option span {
+font-size: 13px;
+font-weight: 400;
+line-height: 1.4;
+}
 
-  /* INLINE GRID (metrics) */
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
+/* INLINE GRID (metrics) */
+.metrics-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
 
-  /* LINKS */
-  .links-container { display: flex; flex-direction: column; gap: 10px; }
-  .link-row { display: flex; gap: 8px; align-items: center; }
-  .link-row input { flex: 1; }
-  .btn-remove {
-    background: none;
-    border: 1.5px solid var(--border);
-    border-radius: 6px;
-    width: 36px; height: 44px;
-    color: var(--muted);
-    font-size: 18px;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    transition: border-color .2s, color .2s;
-  }
-  .btn-remove:hover { border-color: var(--accent); color: var(--accent); }
-  .btn-add-link {
-    background: none;
-    border: 1.5px dashed var(--border);
-    border-radius: 8px;
-    padding: 11px 16px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--muted);
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: border-color .2s, color .2s;
-    margin-top: 4px;
-    text-align: left;
-  }
-  .btn-add-link:hover { border-color: var(--accent); color: var(--accent); }
+/* LINKS */
+.links-container { display: flex; flex-direction: column; gap: 10px; }
+.link-row { display: flex; gap: 8px; align-items: center; }
+.link-row input { flex: 1; }
+.btn-remove {
+background: none;
+border: 1.5px solid var(--border);
+border-radius: 6px;
+width: 36px; height: 44px;
+color: var(--muted);
+font-size: 18px;
+cursor: pointer;
+display: flex; align-items: center; justify-content: center;
+flex-shrink: 0;
+transition: border-color .2s, color .2s;
+}
+.btn-remove:hover { border-color: var(--copper); color: var(--copper); }
+.btn-add-link {
+background: none;
+border: 1.5px dashed var(--border);
+border-radius: 8px;
+padding: 11px 16px;
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+font-weight: 600;
+color: var(--muted);
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: border-color .2s, color .2s;
+margin-top: 4px;
+text-align: left;
+}
+.btn-add-link:hover { border-color: var(--copper); color: var(--copper); }
 
-  /* ERROR */
-  .error-msg {
-    font-size: 11px;
-    color: var(--accent);
-    font-weight: 600;
-    margin-top: 6px;
-    display: none;
-  }
-  .field.has-error input,
-  .field.has-error select,
-  .field.has-error textarea {
-    border-color: var(--accent);
-  }
-  .field.has-error .error-msg { display: block; }
+/* ERROR */
+.error-msg {
+font-size: 11px;
+color: var(--copper);
+font-weight: 600;
+margin-top: 6px;
+display: none;
+}
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea {
+border-color: var(--copper);
+}
+.field.has-error .error-msg { display: block; }
 
-  /* NAV BUTTONS */
-  .nav-buttons {
-    display: flex;
-    gap: 12px;
-    margin-top: 40px;
-  }
-  .btn-back {
-    flex: 0 0 auto;
-    background: none;
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 24px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--near-black);
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: border-color .2s;
-  }
-  .btn-back:hover { border-color: var(--near-black); }
-  .btn-next, .btn-submit {
-    flex: 1;
-    background: var(--accent);
-    border: none;
-    border-radius: 8px;
-    padding: 15px 24px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 900;
-    color: var(--off-white);
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: opacity .2s, transform .1s;
-  }
-  .btn-next:hover, .btn-submit:hover { opacity: .88; }
-  .btn-next:active, .btn-submit:active { transform: scale(.98); }
+/* NAV BUTTONS */
+.nav-buttons {
+display: flex;
+gap: 12px;
+margin-top: 40px;
+}
+.btn-back {
+flex: 0 0 auto;
+background: none;
+border: 1.5px solid var(--border);
+border-radius: 8px;
+padding: 14px 24px;
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+font-weight: 600;
+color: var(--espresso);
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: border-color .2s;
+}
+.btn-back:hover { border-color: var(--espresso); }
+.btn-next, .btn-submit {
+flex: 1;
+background: var(--copper);
+border: none;
+border-radius: 8px;
+padding: 15px 24px;
+font-family: 'Montserrat', sans-serif;
+font-size: 12px;
+font-weight: 700;
+color: var(--cream);
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+transition: opacity .2s, transform .1s;
+}
+.btn-next:hover, .btn-submit:hover { opacity: .9; }
+.btn-next:active, .btn-submit:active { transform: scale(.98); }
 
-  /* LOADING STATE */
-  .btn-submit.loading {
-    opacity: .6;
-    pointer-events: none;
-  }
+/* LOADING STATE */
+.btn-submit.loading { opacity: .6; pointer-events: none; }
 
-  /* SUCCESS */
-  .success-screen {
-    display: none;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  .success-screen.active { display: block; }
-  .success-icon {
-    width: 64px; height: 64px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 28px;
-    margin: 0 auto 28px;
-  }
-  .success-screen h2 {
-    font-size: 24px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .success-screen p {
-    font-size: 14px;
-    font-weight: 300;
-    color: #6b5a52;
-    max-width: 380px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
+/* SUCCESS */
+.success-screen {
+display: none;
+text-align: center;
+padding: 64px 20px;
+}
+.success-screen.active { display: block; }
+.success-icon {
+width: 64px; height: 64px;
+background: var(--copper);
+border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+font-size: 28px;
+color: var(--cream);
+margin: 0 auto 28px;
+}
+.success-screen h2 {
+font-family: 'Fraunces', serif;
+font-size: 28px;
+font-weight: 600;
+color: var(--espresso);
+margin-bottom: 16px;
+}
+.success-screen p {
+font-size: 14px;
+font-weight: 300;
+color: var(--muted);
+max-width: 380px;
+margin: 0 auto;
+line-height: 1.7;
+}
 
-  /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 32px 0;
-  }
+/* DIVIDER */
+.divider {
+border: none;
+border-top: 1px solid var(--border);
+margin: 32px 0;
+}
 
-  /* FOOTER */
-  footer {
-    background: var(--near-black);
-    padding: 20px 24px;
-    text-align: center;
-  }
-  footer p {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 1px;
-  }
-  footer span { color: var(--accent); }
+/* FOOTER */
+footer {
+background: var(--espresso);
+padding: 22px 28px;
+text-align: center;
+}
+footer p {
+font-size: 11px;
+color: var(--taupe);
+letter-spacing: 1px;
+}
+footer span { color: var(--copper); }
 
-  @media (max-width: 480px) {
-    .metrics-grid { grid-template-columns: 1fr; }
-    .hero { padding: 36px 20px 44px; }
-  }
+@media (max-width: 480px) {
+.metrics-grid { grid-template-columns: 1fr; }
+.hero { padding: 44px 20px 48px; }
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Lika <span>Santana</span></div>
-  <div class="header-tag">Briefing Mensal</div>
+<div class="logo">Lika <span>Santana</span></div>
+<div class="header-tag">Briefing Mensal</div>
 </header>
 
 <div class="hero">
-  <div class="hero-eyebrow">Saúde &amp; Beauty</div>
-  <h1>O mês que vem<br>começa aqui</h1>
-  <p>As informações que você compartilha agora são a base de toda a estratégia do próximo mês. <strong>Quanto mais você nos conta, mais preciso e autêntico fica o seu conteúdo.</strong></p>
+<div class="hero-eyebrow">Saúde &amp; Beauty</div>
+<h1>O mês que vem<br><em>começa aqui</em></h1>
+<p>As informações que você compartilha agora são a base de toda a estratégia do próximo mês. <strong>Quanto mais você nos conta, mais preciso e autêntico fica o seu conteúdo.</strong></p>
 </div>
 
 <div class="progress-wrapper">
-  <div class="progress-steps">
-    <div class="step-item active" id="step-1">
-      <div class="step-circle">01</div>
-      <div class="step-label">Dados</div>
-    </div>
-    <div class="step-item" id="step-2">
-      <div class="step-circle">02</div>
-      <div class="step-label">Negócio</div>
-    </div>
-    <div class="step-item" id="step-3">
-      <div class="step-circle">03</div>
-      <div class="step-label">Conteúdo</div>
-    </div>
-  </div>
+<div class="progress-steps">
+<div class="step-item active" id="step-1">
+<div class="step-circle">01</div>
+<div class="step-label">Dados</div>
+</div>
+<div class="step-item" id="step-2">
+<div class="step-circle">02</div>
+<div class="step-label">Negócio</div>
+</div>
+<div class="step-item" id="step-3">
+<div class="step-circle">03</div>
+<div class="step-label">Conteúdo</div>
+</div>
+</div>
 </div>
 
 <main>
 
-  <!-- SEÇÃO 1: DISPONIBILIDADE -->
-  <div class="form-section active" id="section-1">
-    <div class="section-header">
-      <div class="section-number">Passo 01 · 03</div>
-      <h2>Seus dados<br>e agenda</h2>
-      <p>Vamos organizar o calendário do próximo mês com base na sua disponibilidade real.</p>
-    </div>
+<!-- SEÇÃO 1: DISPONIBILIDADE -->
+<div class="form-section active" id="section-1">
+<div class="section-header">
+<div class="section-number">Passo 01 · 03</div>
+<h2>Seus dados e agenda</h2>
+<p>Vamos organizar o calendário do próximo mês com base na sua disponibilidade real.</p>
+</div>
 
-    <div class="field" id="field-nome">
-      <label>Nome completo <span class="required">*</span></label>
-      <input type="text" id="nome" placeholder="Seu nome">
-      <div class="error-msg">Por favor, informe seu nome.</div>
-    </div>
+<div class="field" id="field-nome">
+<label>Nome completo <span class="required">*</span></label>
+<input type="text" id="nome" placeholder="Seu nome">
+<div class="error-msg">Por favor, informe seu nome.</div>
+</div>
 
-    <div class="field" id="field-mes">
-      <label>Mês de referência <span class="required">*</span></label>
-      <select id="mes">
-        <option value="">Selecione o mês</option>
-        <option>Janeiro 2026</option>
-        <option>Fevereiro 2026</option>
-        <option>Março 2026</option>
-        <option>Abril 2026</option>
-        <option>Maio 2026</option>
-        <option>Junho 2026</option>
-        <option>Julho 2026</option>
-        <option>Agosto 2026</option>
-        <option>Setembro 2026</option>
-        <option>Outubro 2026</option>
-        <option>Novembro 2026</option>
-        <option>Dezembro 2026</option>
-      </select>
-      <div class="error-msg">Por favor, selecione o mês.</div>
-    </div>
+<div class="field" id="field-mes">
+<label>Mês de referência <span class="required">*</span></label>
+<select id="mes">
+<option value="">Selecione o mês</option>
+<option>Janeiro 2026</option>
+<option>Fevereiro 2026</option>
+<option>Março 2026</option>
+<option>Abril 2026</option>
+<option>Maio 2026</option>
+<option>Junho 2026</option>
+<option>Julho 2026</option>
+<option>Agosto 2026</option>
+<option>Setembro 2026</option>
+<option>Outubro 2026</option>
+<option>Novembro 2026</option>
+<option>Dezembro 2026</option>
+</select>
+<div class="error-msg">Por favor, selecione o mês.</div>
+</div>
 
-    <div class="field" id="field-gravacao">
-      <label>Você poderá gravar conteúdos no próximo mês? <span class="required">*</span></label>
-      <div class="radio-group">
-        <label class="radio-option">
-          <input type="radio" name="gravacao" value="Sim, poderei gravar">
-          <span>Sim, poderei gravar</span>
-        </label>
-        <label class="radio-option">
-          <input type="radio" name="gravacao" value="Não poderei gravar no próximo mês">
-          <span>Não poderei gravar no próximo mês</span>
-        </label>
-      </div>
-      <div class="error-msg">Por favor, selecione uma opção.</div>
-    </div>
+<div class="field" id="field-gravacao">
+<label>Você poderá gravar conteúdos no próximo mês? <span class="required">*</span></label>
+<div class="radio-group">
+<label class="radio-option">
+<input type="radio" name="gravacao" value="Sim, poderei gravar">
+<span>Sim, poderei gravar</span>
+</label>
+<label class="radio-option">
+<input type="radio" name="gravacao" value="Não poderei gravar no próximo mês">
+<span>Não poderei gravar no próximo mês</span>
+</label>
+</div>
+<div class="error-msg">Por favor, selecione uma opção.</div>
+</div>
 
-    <div class="field" id="field-materiais">
-      <label>Quais materiais conseguirá nos enviar? <span class="required">*</span></label>
-      <div class="check-group">
-        <label class="check-option">
-          <input type="checkbox" name="materiais" value="Vídeos gravados por mim">
-          <span>Vídeos gravados por mim</span>
-        </label>
-        <label class="check-option">
-          <input type="checkbox" name="materiais" value="Fotos do dia a dia (atendimentos, bastidores)">
-          <span>Fotos do dia a dia (atendimentos, bastidores)</span>
-        </label>
-        <label class="check-option">
-          <input type="checkbox" name="materiais" value="Fotos profissionais">
-          <span>Fotos profissionais</span>
-        </label>
-        <label class="check-option">
-          <input type="checkbox" name="materiais" value="Depoimento de paciente/cliente (vídeo)">
-          <span>Depoimento de paciente/cliente (vídeo)</span>
-        </label>
-        <label class="check-option">
-          <input type="checkbox" name="materiais" value="Depoimento de paciente/cliente (print)">
-          <span>Depoimento de paciente/cliente (print)</span>
-        </label>
-        <label class="check-option">
-          <input type="checkbox" name="materiais" value="Bastidores da clínica/consultório">
-          <span>Bastidores da clínica/consultório</span>
-        </label>
-        <label class="check-option">
-          <input type="checkbox" name="materiais" value="Nenhum material adicional">
-          <span>Nenhum material adicional</span>
-        </label>
-      </div>
-      <div class="error-msg">Selecione pelo menos uma opção.</div>
-    </div>
+<div class="field" id="field-materiais">
+<label>Quais materiais conseguirá nos enviar? <span class="required">*</span></label>
+<div class="check-group">
+<label class="check-option">
+<input type="checkbox" name="materiais" value="Vídeos gravados por mim">
+<span>Vídeos gravados por mim</span>
+</label>
+<label class="check-option">
+<input type="checkbox" name="materiais" value="Fotos do dia a dia (atendimentos, bastidores)">
+<span>Fotos do dia a dia (atendimentos, bastidores)</span>
+</label>
+<label class="check-option">
+<input type="checkbox" name="materiais" value="Fotos profissionais">
+<span>Fotos profissionais</span>
+</label>
+<label class="check-option">
+<input type="checkbox" name="materiais" value="Depoimento de paciente/cliente (vídeo)">
+<span>Depoimento de paciente/cliente (vídeo)</span>
+</label>
+<label class="check-option">
+<input type="checkbox" name="materiais" value="Depoimento de paciente/cliente (print)">
+<span>Depoimento de paciente/cliente (print)</span>
+</label>
+<label class="check-option">
+<input type="checkbox" name="materiais" value="Bastidores da clínica/consultório">
+<span>Bastidores da clínica/consultório</span>
+</label>
+<label class="check-option">
+<input type="checkbox" name="materiais" value="Nenhum material adicional">
+<span>Nenhum material adicional</span>
+</label>
+</div>
+<div class="error-msg">Selecione pelo menos uma opção.</div>
+</div>
 
-    <div class="field">
-      <label>Tem preferência de data para captação? <span class="optional">opcional</span></label>
-      <div class="radio-group">
-        <label class="radio-option">
-          <input type="radio" name="pref-data" value="Tenho preferência" id="pref-sim">
-          <span>Tenho preferência</span>
-        </label>
-        <label class="radio-option">
-          <input type="radio" name="pref-data" value="Podem sugerir" checked>
-          <span>Podem sugerir os melhores dias</span>
-        </label>
-      </div>
-    </div>
+<div class="field">
+<label>Tem preferência de data para captação? <span class="optional">opcional</span></label>
+<div class="radio-group">
+<label class="radio-option">
+<input type="radio" name="pref-data" value="Tenho preferência" id="pref-sim">
+<span>Tenho preferência</span>
+</label>
+<label class="radio-option">
+<input type="radio" name="pref-data" value="Podem sugerir" checked>
+<span>Podem sugerir os melhores dias</span>
+</label>
+</div>
+</div>
 
-    <div class="field" id="field-datas" style="display:none;">
-      <label>Quais dias você prefere?</label>
-      <input type="text" id="datas" placeholder="Ex: dias 08, 09 e 10">
-    </div>
+<div class="field" id="field-datas" style="display:none;">
+<label>Quais dias você prefere?</label>
+<input type="text" id="datas" placeholder="Ex: dias 08, 09 e 10">
+</div>
 
-    <div class="field">
-      <label>Observações sobre gravação <span class="optional">opcional</span></label>
-      <textarea id="obs-gravacao" placeholder="Horários que funcionam melhor, local, alguma limitação..."></textarea>
-    </div>
+<div class="field">
+<label>Observações sobre gravação <span class="optional">opcional</span></label>
+<textarea id="obs-gravacao" placeholder="Horários que funcionam melhor, local, alguma limitação..."></textarea>
+</div>
 
-    <div class="nav-buttons">
-      <button class="btn-next" onclick="goToSection(2)">Próximo</button>
-    </div>
-  </div>
+<div class="nav-buttons">
+<button class="btn-next" onclick="goToSection(2)">Próximo</button>
+</div>
+</div>
 
-  <!-- SEÇÃO 2: NEGÓCIO -->
-  <div class="form-section" id="section-2">
-    <div class="section-header">
-      <div class="section-number">Passo 02 · 03</div>
-      <h2>O que está<br>acontecendo no<br>seu negócio</h2>
-      <p>Essas informações conectam o conteúdo com a realidade da sua agenda e dos seus atendimentos.</p>
-    </div>
+<!-- SEÇÃO 2: NEGÓCIO -->
+<div class="form-section" id="section-2">
+<div class="section-header">
+<div class="section-number">Passo 02 · 03</div>
+<h2>O que está acontecendo no seu negócio</h2>
+<p>Essas informações conectam o conteúdo com a realidade da sua agenda e dos seus atendimentos.</p>
+</div>
 
-    <div class="field" id="field-objecoes">
-      <label>Principais objeções que apareceram <span class="required">*</span></label>
-      <textarea id="objecoes" placeholder="O que as pessoas disseram para não agendar ou não fechar? Essas objeções viram conteúdo estratégico para quebrar barreiras."></textarea>
-      <div class="error-msg">Por favor, preencha este campo.</div>
-    </div>
+<div class="field" id="field-objecoes">
+<label>Principais objeções que apareceram <span class="required">*</span></label>
+<textarea id="objecoes" placeholder="O que as pessoas disseram para não agendar ou não fechar? Essas objeções viram conteúdo estratégico para quebrar barreiras."></textarea>
+<div class="error-msg">Por favor, preencha este campo.</div>
+</div>
 
-    <div class="field">
-      <label>Principal motivo dos não-fechamentos <span class="optional">opcional</span></label>
-      <textarea id="nao-fechamentos" placeholder="Preço, concorrência, falta de urgência, desconfiança? Quanto mais específico, melhor."></textarea>
-    </div>
+<div class="field">
+<label>Principal motivo dos não-fechamentos <span class="optional">opcional</span></label>
+<textarea id="nao-fechamentos" placeholder="Preço, concorrência, falta de urgência, desconfiança? Quanto mais específico, melhor."></textarea>
+</div>
 
-    <div class="field">
-      <label>Algum atendimento ou resultado que vale destacar? <span class="optional">opcional</span></label>
-      <textarea id="destaque" placeholder="Um caso especial, uma transformação de paciente, um tipo de cliente que fechou e você quer atrair mais. Nos conte."></textarea>
-    </div>
+<div class="field">
+<label>Algum atendimento ou resultado que vale destacar? <span class="optional">opcional</span></label>
+<textarea id="destaque" placeholder="Um caso especial, uma transformação de paciente, um tipo de cliente que fechou e você quer atrair mais. Nos conte."></textarea>
+</div>
 
-    <div class="nav-buttons">
-      <button class="btn-back" onclick="goToSection(1)">← Voltar</button>
-      <button class="btn-next" onclick="goToSection(3)">Próximo</button>
-    </div>
-  </div>
+<div class="nav-buttons">
+<button class="btn-back" onclick="goToSection(1)">← Voltar</button>
+<button class="btn-next" onclick="goToSection(3)">Próximo</button>
+</div>
+</div>
 
-  <!-- SEÇÃO 3: CONTEÚDO -->
-  <div class="form-section" id="section-3">
-    <div class="section-header">
-      <div class="section-number">Passo 03 · 03</div>
-      <h2>Histórias &amp;<br>conteúdo do mês</h2>
-      <p>Esse é o combustível do seu conteúdo. Quanto mais você compartilha, mais estratégico e autêntico fica o planejamento.</p>
-    </div>
+<!-- SEÇÃO 3: CONTEÚDO -->
+<div class="form-section" id="section-3">
+<div class="section-header">
+<div class="section-number">Passo 03 · 03</div>
+<h2>Histórias &amp; conteúdo do mês</h2>
+<p>Esse é o combustível do seu conteúdo. Quanto mais você compartilha, mais estratégico e autêntico fica o planejamento.</p>
+</div>
 
-    <div class="field">
-      <label>Situações marcantes que viveu esse mês <span class="optional">opcional</span></label>
-      <textarea id="situacoes" placeholder="Casos que te surpreenderam, conversas que ficaram na cabeça, aprendizados da clínica..."></textarea>
-    </div>
+<div class="field">
+<label>Situações marcantes que viveu esse mês <span class="optional">opcional</span></label>
+<textarea id="situacoes" placeholder="Casos que te surpreenderam, conversas que ficaram na cabeça, aprendizados da clínica..."></textarea>
+</div>
 
-    <div class="field">
-      <label>Resultados de pacientes/clientes para compartilhar <span class="optional">opcional</span></label>
-      <textarea id="resultados" placeholder="Transformações, feedbacks positivos, antes e depois (sem infringir ética profissional)..."></textarea>
-    </div>
+<div class="field">
+<label>Resultados de pacientes/clientes para compartilhar <span class="optional">opcional</span></label>
+<textarea id="resultados" placeholder="Transformações, feedbacks positivos, antes e depois (sem infringir ética profissional)..."></textarea>
+</div>
 
-    <div class="field" id="field-servicos">
-      <label>Procedimentos ou serviços para destacar esse mês <span class="required">*</span></label>
-      <textarea id="servicos" placeholder="O que você quer que apareça mais no conteúdo? Quais procedimentos ou serviços estão em foco?"></textarea>
-      <div class="error-msg">Por favor, informe o que quer destacar.</div>
-    </div>
+<div class="field" id="field-servicos">
+<label>Procedimentos ou serviços para destacar esse mês <span class="required">*</span></label>
+<textarea id="servicos" placeholder="O que você quer que apareça mais no conteúdo? Quais procedimentos ou serviços estão em foco?"></textarea>
+<div class="error-msg">Por favor, informe o que quer destacar.</div>
+</div>
 
-    <div class="field">
-      <label>Tem alguma novidade chegando? <span class="optional">opcional</span></label>
-      <textarea id="novidades" placeholder="Novo procedimento, promoção, evento, mudança no consultório, expansão..."></textarea>
-    </div>
+<div class="field">
+<label>Tem alguma novidade chegando? <span class="optional">opcional</span></label>
+<textarea id="novidades" placeholder="Novo procedimento, promoção, evento, mudança no consultório, expansão..."></textarea>
+</div>
 
-    <div class="field">
-      <label>Temas que quer abordar no conteúdo <span class="optional">opcional</span></label>
-      <textarea id="temas" placeholder="Dúvidas frequentes dos pacientes, mitos da área, dicas que você sempre dá no atendimento..."></textarea>
-    </div>
+<div class="field">
+<label>Temas que quer abordar no conteúdo <span class="optional">opcional</span></label>
+<textarea id="temas" placeholder="Dúvidas frequentes dos pacientes, mitos da área, dicas que você sempre dá no atendimento..."></textarea>
+</div>
 
-    <div class="field">
-      <label>Referências de conteúdo <span class="optional">opcional</span></label>
-      <div class="links-container" id="links-container">
-        <div class="link-row">
-          <input type="text" placeholder="Cole o link (Instagram, Reels, post...)" class="link-input">
-        </div>
-      </div>
-      <button class="btn-add-link" onclick="addLink()">+ Adicionar link</button>
-    </div>
+<div class="field">
+<label>Referências de conteúdo <span class="optional">opcional</span></label>
+<div class="links-container" id="links-container">
+<div class="link-row">
+<input type="text" placeholder="Cole o link (Instagram, Reels, post...)" class="link-input">
+</div>
+</div>
+<button class="btn-add-link" onclick="addLink()">+ Adicionar link</button>
+</div>
 
-    <div class="field">
-      <label>Algo mais que queira compartilhar com a equipe? <span class="optional">opcional</span></label>
-      <textarea id="extras" placeholder="Observações, pedidos especiais, o que você quer evitar esse mês..."></textarea>
-    </div>
+<div class="field">
+<label>Algo mais que queira compartilhar com a equipe? <span class="optional">opcional</span></label>
+<textarea id="extras" placeholder="Observações, pedidos especiais, o que você quer evitar esse mês..."></textarea>
+</div>
 
-    <div class="nav-buttons">
-      <button class="btn-back" onclick="goToSection(2)">← Voltar</button>
-      <button class="btn-submit" id="btn-submit" onclick="submitForm()">Enviar briefing</button>
-    </div>
-  </div>
+<div class="nav-buttons">
+<button class="btn-back" onclick="goToSection(2)">← Voltar</button>
+<button class="btn-submit" id="btn-submit" onclick="submitForm()">Enviar briefing</button>
+</div>
+</div>
 
-  <!-- SUCESSO -->
-  <div class="success-screen" id="success-screen">
-    <div class="success-icon">✓</div>
-    <h2>Briefing recebido!</h2>
-    <p>Nossa equipe já está analisando tudo para montar a melhor estratégia do próximo mês para você.</p>
-  </div>
+<!-- SUCESSO -->
+<div class="success-screen" id="success-screen">
+<div class="success-icon">✓</div>
+<h2>Briefing recebido!</h2>
+<p>Nossa equipe já está analisando tudo para montar a melhor estratégia do próximo mês para você.</p>
+</div>
 
 </main>
 
 <footer>
-  <p><span>@lalikaleal</span> · Lika Santana · Social Media · Saúde &amp; Beauty</p>
+<p><span>@lalikaleal</span> · Lika Santana · Social Media · Saúde &amp; Beauty</p>
 </footer>
 
 <script>
-  let currentSection = 1;
+let currentSection = 1;
 
-  // Mostrar/ocultar campo de datas
-  document.querySelectorAll('input[name="pref-data"]').forEach(radio => {
-    radio.addEventListener('change', () => {
-      const campo = document.getElementById('field-datas');
-      campo.style.display = radio.value === 'Tenho preferência' && radio.checked ? 'block' : 'none';
-    });
-  });
+// Mostrar/ocultar campo de datas
+document.querySelectorAll('input[name="pref-data"]').forEach(radio => {
+radio.addEventListener('change', () => {
+const campo = document.getElementById('field-datas');
+campo.style.display = radio.value === 'Tenho preferência' && radio.checked ? 'block' : 'none';
+});
+});
 
-  function goToSection(n) {
-    if (n > currentSection && !validateSection(currentSection)) return;
+function goToSection(n) {
+if (n > currentSection && !validateSection(currentSection)) return;
 
-    document.getElementById('section-' + currentSection).classList.remove('active');
-    document.getElementById('step-' + currentSection).classList.remove('active');
-    document.getElementById('step-' + currentSection).classList.add('done');
+document.getElementById('section-' + currentSection).classList.remove('active');
+document.getElementById('step-' + currentSection).classList.remove('active');
+document.getElementById('step-' + currentSection).classList.add('done');
 
-    currentSection = n;
+currentSection = n;
 
-    document.getElementById('section-' + currentSection).classList.add('active');
-    document.getElementById('step-' + currentSection).classList.add('active');
-    document.getElementById('step-' + currentSection).classList.remove('done');
+document.getElementById('section-' + currentSection).classList.add('active');
+document.getElementById('step-' + currentSection).classList.add('active');
+document.getElementById('step-' + currentSection).classList.remove('done');
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-  function validateSection(n) {
-    let valid = true;
+function validateSection(n) {
+let valid = true;
 
-    if (n === 1) {
-      const nome = document.getElementById('nome');
-      const mes = document.getElementById('mes');
-      const gravacao = document.querySelector('input[name="gravacao"]:checked');
-      const materiais = document.querySelectorAll('input[name="materiais"]:checked');
+if (n === 1) {
+const nome = document.getElementById('nome');
+const mes = document.getElementById('mes');
+const gravacao = document.querySelector('input[name="gravacao"]:checked');
+const materiais = document.querySelectorAll('input[name="materiais"]:checked');
 
-      setError('field-nome', !nome.value.trim());
-      setError('field-mes', !mes.value);
-      setError('field-gravacao', !gravacao);
-      setError('field-materiais', materiais.length === 0);
+setError('field-nome', !nome.value.trim());
+setError('field-mes', !mes.value);
+setError('field-gravacao', !gravacao);
+setError('field-materiais', materiais.length === 0);
 
-      if (!nome.value.trim() || !mes.value || !gravacao || materiais.length === 0) valid = false;
-    }
+if (!nome.value.trim() || !mes.value || !gravacao || materiais.length === 0) valid = false;
+}
 
-    if (n === 2) {
-      const objecoes = document.getElementById('objecoes');
-      setError('field-objecoes', !objecoes.value.trim());
-      if (!objecoes.value.trim()) valid = false;
-    }
+if (n === 2) {
+const objecoes = document.getElementById('objecoes');
+setError('field-objecoes', !objecoes.value.trim());
+if (!objecoes.value.trim()) valid = false;
+}
 
-    if (n === 3) {
-      const servicos = document.getElementById('servicos');
-      setError('field-servicos', !servicos.value.trim());
-      if (!servicos.value.trim()) valid = false;
-    }
+if (n === 3) {
+const servicos = document.getElementById('servicos');
+setError('field-servicos', !servicos.value.trim());
+if (!servicos.value.trim()) valid = false;
+}
 
-    return valid;
-  }
+return valid;
+}
 
-  function setError(fieldId, hasError) {
-    const field = document.getElementById(fieldId);
-    if (!field) return;
-    if (hasError) field.classList.add('has-error');
-    else field.classList.remove('has-error');
-  }
+function setError(fieldId, hasError) {
+const field = document.getElementById(fieldId);
+if (!field) return;
+if (hasError) field.classList.add('has-error');
+else field.classList.remove('has-error');
+}
 
-  function addLink() {
-    const container = document.getElementById('links-container');
-    const row = document.createElement('div');
-    row.className = 'link-row';
-    row.innerHTML = `
-      <input type="text" placeholder="Cole o link (Instagram, Reels, post...)" class="link-input">
-      <button class="btn-remove" onclick="this.parentElement.remove()">×</button>
-    `;
-    container.appendChild(row);
-  }
+function addLink() {
+const container = document.getElementById('links-container');
+const row = document.createElement('div');
+row.className = 'link-row';
+row.innerHTML = `
+<input type="text" placeholder="Cole o link (Instagram, Reels, post...)" class="link-input">
+<button class="btn-remove" onclick="this.parentElement.remove()">×</span></button>
+`;
+container.appendChild(row);
+}
 
-  function collectData() {
-    const materiais = [...document.querySelectorAll('input[name="materiais"]:checked')].map(c => c.value);
-    const prefData = document.querySelector('input[name="pref-data"]:checked');
-    const links = [...document.querySelectorAll('.link-input')].map(i => i.value).filter(v => v.trim());
+function collectData() {
+const materiais = [...document.querySelectorAll('input[name="materiais"]:checked')].map(c => c.value);
+const prefData = document.querySelector('input[name="pref-data"]:checked');
+const links = [...document.querySelectorAll('.link-input')].map(i => i.value).filter(v => v.trim());
 
-    return {
-      nome: document.getElementById('nome').value,
-      mes: document.getElementById('mes').value,
-      gravacao: document.querySelector('input[name="gravacao"]:checked')?.value || '',
-      materiais,
-      preferencia_datas: prefData?.value || '',
-      datas_preferidas: document.getElementById('datas').value,
-      obs_gravacao: document.getElementById('obs-gravacao').value,
-      objecoes: document.getElementById('objecoes').value,
-      nao_fechamentos: document.getElementById('nao-fechamentos').value,
-      destaque_atendimento: document.getElementById('destaque').value,
-      situacoes_marcantes: document.getElementById('situacoes').value,
-      resultados_pacientes: document.getElementById('resultados').value,
-      servicos_destaque: document.getElementById('servicos').value,
-      novidades: document.getElementById('novidades').value,
-      temas_conteudo: document.getElementById('temas').value,
-      referencias_links: links,
-      observacoes_extras: document.getElementById('extras').value,
-    };
-  }
+return {
+nome: document.getElementById('nome').value,
+mes: document.getElementById('mes').value,
+gravacao: document.querySelector('input[name="gravacao"]:checked')?.value || '',
+materiais,
+preferencia_datas: prefData?.value || '',
+datas_preferidas: document.getElementById('datas').value,
+obs_gravacao: document.getElementById('obs-gravacao').value,
+objecoes: document.getElementById('objecoes').value,
+nao_fechamentos: document.getElementById('nao-fechamentos').value,
+destaque_atendimento: document.getElementById('destaque').value,
+situacoes_marcantes: document.getElementById('situacoes').value,
+resultados_pacientes: document.getElementById('resultados').value,
+servicos_destaque: document.getElementById('servicos').value,
+novidades: document.getElementById('novidades').value,
+temas_conteudo: document.getElementById('temas').value,
+referencias_links: links,
+observacoes_extras: document.getElementById('extras').value,
+};
+}
 
-  async function submitForm() {
-    if (!validateSection(3)) return;
+async function submitForm() {
+if (!validateSection(3)) return;
 
-    const btn = document.getElementById('btn-submit');
-    btn.textContent = 'Enviando...';
-    btn.classList.add('loading');
+const btn = document.getElementById('btn-submit');
+btn.textContent = 'Enviando...';
+btn.classList.add('loading');
 
-    const dados = collectData();
+const dados = collectData();
 
-    try {
-      const response = await fetch('https://briefing-mensal-lika.onrender.com/webhook', {
-        method: 'POST',
-        body: (() => { const fd = new FormData(); fd.append('dados', JSON.stringify(dados)); return fd; })()
-      });
+try {
+const response = await fetch('https://briefing-mensal-lika.onrender.com/webhook', {
+method: 'POST',
+body: (() => { const fd = new FormData(); fd.append('dados', JSON.stringify(dados)); return fd; })()
+});
 
-      if (response.ok) {
-        document.getElementById('section-3').classList.remove('active');
-        document.getElementById('success-screen').classList.add('active');
-        document.getElementById('step-3').classList.remove('active');
-        document.getElementById('step-3').classList.add('done');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        throw new Error('Erro no servidor');
-      }
-    } catch (e) {
-      btn.textContent = 'Enviar briefing';
-      btn.classList.remove('loading');
-      alert('Houve um problema ao enviar. Tente novamente.');
-    }
-  }
+if (response.ok) {
+document.getElementById('section-3').classList.remove('active');
+document.getElementById('success-screen').classList.add('active');
+document.getElementById('step-3').classList.remove('active');
+document.getElementById('step-3').classList.add('done');
+window.scrollTo({ top: 0, behavior: 'smooth' });
+} else {
+throw new Error('Erro no servidor');
+}
+} catch (e) {
+btn.textContent = 'Enviar briefing';
+btn.classList.remove('loading');
+alert('Houve um problema ao enviar. Tente novamente.');
+}
+}
 </script>
 </body>
 </html>

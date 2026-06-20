@@ -11,8 +11,7 @@ CORS(app)
 
 GROQ_API_KEY       = os.environ.get("GROQ_API_KEY")
 NOTION_TOKEN       = os.environ.get("NOTION_TOKEN")
-NOTION_DATABASE_ID = os.environ.get("NOTION_DATABASE_ID")
-
+NOTION_DATABASE_ID = "99729d87e9884edd8b57dfc5dffc842d"  # Notion novo - Leoa Business
 
 @app.route("/", methods=["GET"])
 def health():
@@ -144,7 +143,7 @@ def criar_pagina_notion(nome, hoje, hoje_iso, dados, diagnostico):
         "properties": {
             "Briefing": {"title": [{"text": {"content": f"Briefing {nome} - {hoje}"}}]},
             "Dia Recebido": {"date": {"start": hoje_iso}},
-            "Status": {"select": {"name": "Nao usado"}}
+            "Status": {"select": {"name": "Não usado"}}
         },
         "children": blocos
     }
